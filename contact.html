@@ -102,7 +102,7 @@
                     return false;
                 }
 
-                if(empty(document.forms["formulaire"].value)){
+                if(!empty(document.forms["formulaire"])){
                     alert("Ok validé !");
 
                     var page = document.location.pathname.replace('contact/confirm');
