@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-
         <!-- Google Analytics -->
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -11,7 +10,6 @@
         
         ga('create', 'UA-135901164-2', 'auto');
         ga('send', 'pageview');
-        ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue], [fieldsObject]);
         </script>
         <!-- End Google Analytics -->
 
@@ -23,17 +21,17 @@
         })(window,document,'script','dataLayer','GTM-MCJCVSF');</script>
         <!-- End Google Tag Manager -->
         <meta charset="utf-8">
-        <meta name="description" content="td formulaire contact referencement google analytics">
+        <meta name="description" content="td referencement google analytics">
         <meta name="author" content="Manon Bellec">
-        <title>Referencement - Contact</title>
+        <title>Referencement</title>
     </head>
     
     <header>        
         <h1>Accueil</h1>
         
         <ul>
-            <li><a href="index.html">ACCUEIL</a></li>
-            <li id="active"><a href="contact.html">CONTACT</a></li>
+            <li id="active"><a href="">ACCUEIL</a></li>
+            <li><a href="contact.html" onclick="handleOutboundLinkClicksContact(event)">CONTACT</a></li>
         </ul>
     </header>
     
@@ -42,36 +40,33 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCJCVSF"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-        <h1>Formulaire de contact</h1>
-
-
-
-        <form name="formulaire" onsubmit="return validateForm()">
-            <label for="name">Nom :</label>
-            <input type="text" name="name" />
-
-            <br />
-
-            <label for="firstname">Prénom :</label>
-            <input type="text" name="firstname" />
-
-            <br />
-
-            <label for="mail">Email :</label>
-            <input type="email" name="mail" />
-
-            <br />
-
-            <label for="message">Message :</label>
-            <textarea name="message"></textarea>
-
-            <br />
-            
-            <input type="submit" value="Envoyer">
-            </form>
+        
+        <form name="formulaire" onsubmit="handleOutboundLinkClicksContact(event)">
+                <label for="name">Nom :</label>
+                <input type="text" name="name" />
+    
+                <br />
+    
+                <label for="firstname">Prénom :</label>
+                <input type="text" name="firstname" />
+    
+                <br />
+    
+                <label for="mail">Email :</label>
+                <input type="email" name="mail" />
+    
+                <br />
+    
+                <label for="message">Message :</label>
+                <textarea name="message"></textarea>
+    
+                <br />
+                
+                <input type="submit" value="Envoyer">
+                </form>      
         
         <script>
-            function validateForm() {
+            function handleOutboundLinkClicksContact(event) {
                 var name = document.forms["formulaire"]["name"].value;
                 var firsname = document.forms["formulaire"]["firstname"].value;
                 var email = document.forms["formulaire"]["email"].value;
@@ -80,40 +75,19 @@
                 console.log(name);
                 console.log(firsname);
 
-                /*if (name == "") {
-                    alert("Champ nom requis !");
-                    return false;
-                }
+                ga('send', 'event', {
+                    eventCategory: 'home page',
+                    eventAction: 'click',
+                    eventLabel: 'contact'
+                });
+            }
 
-                else if(firsname == "") {
-                    alert("Champ prénom requis !");
-                    return false;
-                }
-
-                else if(email == "") {
-                    alert("Champ email requis !");
-                    return false;
-                }
-
-                else if(message == "") {
-                    alert("Champ message requis !");
-                    return false;
-                }
-
-                else if(message == "" && firsname == "" && email == "" && message == "") {
-                    alert("Tous les champs sont requis !");
-                    return false;
-                }
-
-                alert('ok');
-                //ga('send', 'pageview', 'contact/confirm');*/
-                
-          }
         </script>
+
     </body>
     
     <footer>
         <p id="baspage">&copy; LP Web 2018</p>
     </footer>
-
 </html>
+                 
