@@ -102,12 +102,9 @@
                     return false;
                 }
 
-                if(!empty(document.forms["formulaire"])){
-                    alert("Ok validé !");
-
-                    var page = document.location.pathname.replace('contact/confirm');
-                    ga('send', 'pageview', page);
-                }
+                var page = document.location.pathname.replace('contact/confirm');
+                ga('send', 'pageview', page);
+                
           }
         </script>
     </body>
