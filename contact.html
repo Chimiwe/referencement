@@ -42,22 +42,22 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <h1>Formulaire de contact</h1>
-        <form action="#" method="GET" onsubmit="return validateForm()">
+        <form action="#" method="GET">
             <label for="nom">Nom :</label>
-            <input name="nom" type="text" placeholder="Votre nom..."/>
+            <input required name="nom" type="text" placeholder="Votre nom..."/>
 
             <br />
 
             <label for="prenom">Prénom : </label>
-            <input type="text" name="prenom" placeholder="Votre prénom..." />
+            <input required type="text" name="prenom" placeholder="Votre prénom..." />
 
             <br />
 
             <label for="mail">Email :</label>
-            <input type="email" name="email" placeholder="Votre email..." />
+            <input required type="email" name="email" placeholder="Votre email..." />
         
             <label for="message">Message :</label>
-            <textarea name="message" placeholder="Votre message..."></textarea>
+            <textarea required name="message" placeholder="Votre message..."></textarea>
             
             <input type="submit" value="Envoyer" />
         </form>      
@@ -67,14 +67,4 @@
         <p id="baspage">&copy; LP Web 2018</p>
     </footer>
 
-    <!-- Javascript -->
-    <script>
-        function validateForm() {
-            var x = document.forms["myForm"]["nom"].value;
-            if (x == "") {
-                alert("Name must be filled out");
-                return false;
-            }
-        }
-    </script>
 </html>
