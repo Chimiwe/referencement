@@ -46,16 +46,19 @@
         <img src="https://i.etsystatic.com/10517599/r/il/b0fbc7/1078523407/il_570xN.1078523407_4uwu.jpg" alt="blue lamacorn" />
         <h2>Blue lamacorn</h2>
         
-        <script>
-        <button onclick="ClickBuy()">Buy this one !</button>
+        <button href="index.html" onclick="handleOutboundLinkClicksValidation(event)">Buy this one !</button>
 
-            function ClickBuy(event){
-            ga('send', 'event', {
-                eventCategory: 'Outbound Link',
-                eventAction: 'click',
-                eventLabel: event.target.href
-            });
-        }
+        <script>
+            function handleOutboundLinkClicksValidation(event) {
+                alert('ok panier !');
+                
+                ga('send', 'event', {
+                    eventCategory: 'ajout panier',
+                    eventAction: 'click',
+                    eventLabel: 'lamacorne',
+                    eventValue:'1'
+                });
+            }
         </script>
         
     </body>
