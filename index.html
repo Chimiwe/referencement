@@ -31,7 +31,7 @@
         
         <ul>
             <li id="active"><a href="">ACCUEIL</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="contact.html" onclick="handleOutboundLinkClicks()">CONTACT</a></li>
         </ul>
     </header>
     
@@ -42,8 +42,20 @@
         <!-- End Google Tag Manager (noscript) -->
         <p>Bonjour bonjour.</p>
 
-        <a href="FR/produit.html">Acheter ce produit !</a>
-        <a href="EN/product.html">Buy this product !</a>       
+        <a href="FR/produit.html" onclick="handleOutboundLinkClicks()">Acheter ce produit !</a>
+        <a href="EN/product.html" onclick="handleOutboundLinkClicks()">Buy this product !</a> 
+        
+        
+        <script>
+            function handleOutboundLinkClicks(event) {
+                ga('send', 'event', {
+                    eventCategory: 'home page',
+                    eventAction: 'click',
+                    eventLabel: event.target.href
+                });
+            }
+        </script>
+
     </body>
     
     <footer>
