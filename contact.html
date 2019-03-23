@@ -42,38 +42,65 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <h1>Formulaire de contact</h1>
-        <form action="#" method="GET">
-            <label for="nom">Nom :</label>
-            <input required name="nom" type="text" placeholder="Votre nom..."/>
+
+
+
+        <form name="formulaire" action="" onsubmit="return validateForm()" method="post">
+            <label for="name">Nom :</label>
+            <input type="text" name="name" />
 
             <br />
 
-            <label for="prenom">Prénom : </label>
-            <input required type="text" name="prenom" placeholder="Votre prénom..." />
+            <label for="firstname">Prénom :</label>
+            <input type="text" name="firstname" />
 
             <br />
 
             <label for="mail">Email :</label>
-            <input required type="email" name="email" placeholder="Votre email..." />
-        
-            <label for="message">Message :</label>
-            <textarea required name="message" placeholder="Votre message..."></textarea>
-            
-            <input type="submit" value="Envoyer" />
-        </form> 
+            <input type="email" name="mail" />
 
-        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-            Name: <input type="text" name="fname">
-            <input type="submit" value="Submit">
+            <br />
+
+            <label for="message">Message :</label>
+            <textarea name="message"></textarea>
+
+            <br />
+
+            
+            <input type="submit" value="Envoyer">
             </form>
         
         <script>
             function validateForm() {
-            var x = document.forms["myForm"]["fname"].value;
-            if (x == "") {
-              alert("Name must be filled out");
-              return false;
-            }
+                var name = document.forms["formulaire"]["name"].value;
+                var firsname = document.forms["formulaire"]["firstname"].value;
+                var email = document.forms["formulaire"]["email"].value;
+                var message = document.forms["formulaire"]["message"].value;
+
+                if (name == "") {
+                    alert("Champ nom requis !");
+                    return false;
+                }
+
+                else if(firsname == "") {
+                    alert("Champ prénom requis !");
+                    return false;
+                }
+
+                else if(email == "") {
+                    alert("Champ email requis !");
+                    return false;
+                }
+
+                else if(message == "") {
+                    alert("Champ message requis !");
+                    return false;
+                }
+
+                else if(message == "" && firsname == "" && email == "" &&message == "") {
+                    alert("Tous les champs sont requis !");
+                    return false;
+                }
           }
         </script>
     </body>
