@@ -97,13 +97,12 @@
                     return false;
                 }
 
-                else if(message == "" && firsname == "" && email == "" &&message == "") {
+                else if(message == "" && firsname == "" && email == "" && message == "") {
                     alert("Tous les champs sont requis !");
                     return false;
                 }
 
-                var page = document.location.pathname.replace('contact/confirm');
-                ga('send', 'pageview', page);
+                ga('send', 'pageview', 'contact/confirm');
                 
           }
         </script>
