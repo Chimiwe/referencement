@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
-
         <!-- Google Analytics -->
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -11,9 +10,9 @@
         
         ga('create', 'UA-135901164-2', 'auto');
         ga('send', 'pageview');
-        ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue], [fieldsObject]);
         </script>
         <!-- End Google Analytics -->
+
         <!-- Google Tag Manager --> 
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -22,17 +21,17 @@
         })(window,document,'script','dataLayer','GTM-MCJCVSF');</script>
         <!-- End Google Tag Manager -->
         <meta charset="utf-8">
-        <meta name="description" content="td formulaire contact referencement google analytics">
+        <meta name="description" content="td referencement google analytics">
         <meta name="author" content="Manon Bellec">
-        <title>Referencement - Contact</title>
+        <title>Referencement</title>
     </head>
     
     <header>        
         <h1>Accueil</h1>
         
         <ul>
-            <li><a href="../index.html">ACCUEIL</a></li>
-            <li><a href="../contact.html">CONTACT</a></li>
+            <li ><a href="../index.html">ACCUEIL</a></li>
+            <li><a href="../contact.html" onclick="handleOutboundLinkClicksContact(event)">CONTACT</a></li>
         </ul>
     </header>
     
@@ -41,26 +40,26 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCJCVSF"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-        <h1>Product</h1>
+        <p>Bonjour bonjour.</p>
 
-        <img src="https://i.etsystatic.com/10517599/r/il/b0fbc7/1078523407/il_570xN.1078523407_4uwu.jpg" alt="blue lamacorn" />
-        <h2>Blue lamacorn</h2>
+        <h2>Lamacorn</h2>
+
+        <img src="https://i.pinimg.com/236x/ce/6a/2e/ce6a2e4cca6a656b43bfc96950e8f3ba--background-ideas-overlays.jpg" alt="lamacorn" />
         
-        <button href="index.html" onclick="handleOutboundLinkClicksValidation(event)">Buy this one !</button>
-
+        <a href="product.html" onclick="handleOutboundLinkClicksEN(event)">Buy this product !</a>       
+        
         <script>
-            function handleOutboundLinkClicksValidation(event) {
-                alert('ok panier !');
-                
+
+            function handleOutboundLinkClicksEN(event) {
                 ga('send', 'event', {
                     eventCategory: 'ajout panier',
                     eventAction: 'click',
-                    eventLabel: 'lamacorne',
-                    eventValue:'1'
+                    eventLabel:'lamacorn',
+                    eventValue:'2',
                 });
             }
         </script>
-        
+
     </body>
     
     <footer>
